@@ -1,0 +1,18 @@
+$.ajax({
+	url: "https://api.edmunds.com/api/vehicle/v2/makes?state=used&year=2014&view=basic&fmt=json&api_key=xaq2gcmpz7k5kt84d6wvwdpf",
+
+	method: "GET",
+
+
+});
+
+function successHandler(data){
+	console.log(data);
+
+};
+
+
+function errorHandler(error){
+	console.log(error);
+
+};
