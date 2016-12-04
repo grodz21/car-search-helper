@@ -33,31 +33,7 @@ $(document).ready(function(){
 	}
 
 
-	// LEFT SIDE NAVIGATION BEHAVIOR
-
-	/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-	$( ".openNav" ).click(function() {
-  		document.getElementById("mySidenav").style.width = "250px";
-	    document.getElementById("main").style.marginLeft = "250px";
-	});
-
-	/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-	$( ".closeNav" ).click(function() {
-  		document.getElementById("mySidenav").style.width = "0";
-	    document.getElementById("main").style.marginLeft = "0";
-	});
-
-
-
-	// RIGHT SIDE NAVIGATION BEHAVIOR
-
-	$(".openRightNav").click(function() {
-  		document.getElementById("myRightSidenav").style.width = "250px";
-	    document.getElementById("main").style.marginRight = 
-      	String(window.innerWidth - 250) + "px";
-	});
-
-
+	
 
 })
 
