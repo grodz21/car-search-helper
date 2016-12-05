@@ -1,3 +1,7 @@
+/*div {
+    border: 1px solid Chocolate;
+}*/
+
 /******GENERAL*******/
 
 h1 {
@@ -9,11 +13,13 @@ body {
 	background-color: #e8e9ed;
 }
 
+
 /******NAVIGATION******/
 
 .navigationBarTop {
 	background-color: #2196F3;
 	height: 70px;
+	z-index: -1;
 }
 
 .fa-search {
@@ -37,14 +43,113 @@ body {
     text-shadow: 2px 2px #212121;
 }
 
+.fa-history:active, .fa-search:active {
+	background-color: #878787;
+  	color: transparent;
+  	text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+  	-webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+.fa-car {
+	color: white;
+	margin-right: 15px;
+	float: right;
+	
+}
+
 /******MAIN CONTENT******/
 
+.outerleftHorizontal {
+	background-color: #1976D2;
+	height: 950px;
+	width: 4%;
+	display: inline-block;
+	margin-right: -6px;
+	position: relative;
+	vertical-align: top;
+}
+
+.verticalLineNav {
+	margin: 0;
+    height: 950px;
+    width: 3px;
+    float: right;
+    background-color: #BBDEFB;
+    position: relative;
+    vertical-align: top;
+}
+
+.fa {
+	margin-top: 20px;
+}
+
+.fa-history {
+	margin-right: 5px;
+} 
 
 
+.innerleftHorizontal {
+	background-color: #2196F3;
+	height: 950px;
+	width: 10%;
+	display: inline-block;
+	position: relative;
+	margin-right: -6px;
+	vertical-align: top;
 
+	/*BOX SHADOW*/
 
+	-webkit-box-shadow: 12px 0px 23px -11px rgba(0,0,0,0.75);
+	-moz-box-shadow: 12px 0px 23px -11px rgba(0,0,0,0.75);
+	box-shadow: 12px 0px 23px -11px rgba(0,0,0,0.75);
+}
 
+.topBarHorizontal {
+	background-color: #E040FB;
+	height: 100px;
+	width: 1640px;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	z-index: -1;
 
+	/*BOX SHADOW*/
+	
+	-webkit-box-shadow: 0px -10px 56px 7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px -10px 56px 7px rgba(0,0,0,0.75);
+	box-shadow: 0px -10px 56px 7px rgba(0,0,0,0.75);
+}
+
+.bodyWrapper {
+	display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.contentWrapper {
+	width: 70%;
+	height: 700px;
+	margin: 70px 200px;
+	background-color: #f8f8ff;
+	display: inline-block;
+	position: relative;
+	z-index: 5;
+	vertical-align: top;
+
+	/*ROUNDED CORNERS*/
+	border-radius: 11px 11px 11px 11px;
+	-moz-border-radius: 11px 11px 11px 11px;
+	-webkit-border-radius: 11px 11px 11px 11px;
+	border: 0px solid #000000;
+
+	/*BOX SHADOW*/
+	-webkit-box-shadow: 0px 0px 82px -16px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 82px -16px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 82px -16px rgba(0,0,0,0.75);
+}
 
 
 
