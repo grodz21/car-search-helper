@@ -4,8 +4,10 @@
 
 /******GENERAL*******/
 
-h1 {
+h3 {
 	font-family: 'Poiret One', cursive;
+	color: white;
+	float: right;
 }
 
 body {
