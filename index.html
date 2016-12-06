@@ -48,10 +48,24 @@
 
 			<form>
 				<br>
-				<input type="text" name="yearOfCar" id="yearOfCar" placeholder="Year">
+				<input type="number" name="yearOfCar" id="yearOfCar" placeholder="Year">
 			</form>
+
+			<!-- <select name="carMakeNames" id="carMakes">
+			  <option value="new">New</option>
+			</select> -->
+
+
+
+
+
+
+
 			<br>
 			<button class="submitButton" id="submitDataBttn">SUBMIT</button>
+
+
+
 		</div>
 
 	</div>
@@ -59,14 +73,18 @@
 	<div class="bodyWrapper">
 		<div class="topBarHorizontal">
 
-			<div class="getMakOverveiewApicall">
-				<!-- Get info "Get Make Overview" from the Editorial section -->
+			<div class="getMakeOverveiewApicall">
+				<!-- "Get Make Overview" from the Editorial section -->
+				<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" class="infoContentText">
+            		<span style="color: white; font-size: 20px;"><strong>Hover to stop!</strong></span>            		
+				</marquee>
 
 			</div>
 
-			<i class="fa fa-car fa-4x" aria-hidden="true"></i>
-			<h3>CarSearchHelper</h3>
-
+			<div class="logoWrapper">
+				<i class="fa fa-car fa-4x" aria-hidden="true"></i>
+				<h3>CarSearchHelper</h3>
+			</div>
 			
 
 		</div>

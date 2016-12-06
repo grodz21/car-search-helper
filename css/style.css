@@ -10,6 +10,7 @@ h3 {
 	float: right;
 }
 
+
 body {
 	margin: 0;
 	background-color: #e8e9ed;
@@ -54,12 +55,40 @@ body {
     background-clip: text;
 }
 
+
+/*********TOP BAR CONTENT***********/
+
 .fa-car {
 	color: white;
 	margin-right: 15px;
 	float: right;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	z-index: 6;
 	
 }
+
+.infoContentText {
+	margin-top: 8px;
+	font-family: 'Poiret One', cursive;
+
+}
+
+.getMakeOverveiewApicall {
+	height: 40px;
+	width: 1200px;
+	vertical-align: top;
+	margin: 0px;
+	display: inline-block;
+    z-index: 3;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 30px;
+    overflow: hidden;
+
+}
+
 
 /******MAIN CONTENT******/
 

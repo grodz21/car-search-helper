@@ -2,12 +2,15 @@ $(document).ready(function(){
 	
 	var apiKey = "xaq2gcmpz7k5kt84d6wvwdpf";
 
-	var stateOfVehicle = $('#stateOfCar').val();
-	var modelYear = $('#yearOfCar').val();
+	
 
 
 
 	$("#submitDataBttn").on('click', function() {
+
+		var stateOfVehicle = $('#stateOfCar').val();
+		var modelYear = Number($('#yearOfCar').val());
+
 
 		$.ajax({
 			url: "https://api.edmunds.com/api/vehicle/v2/makes?state=" + stateOfVehicle + "&year=" + modelYear + 
@@ -20,7 +23,7 @@ $(document).ready(function(){
 		.fail(errorHandler);
 
 		function successHandler(data){
-			console.log(data);
+			;
 		};
 
 
@@ -30,6 +33,7 @@ $(document).ready(function(){
 	});
 
 
+	$
 
 
 
