@@ -1,0 +1,23 @@
+Things I want to show in the main content area:
+
+
+*VEHICLE API AREA*
+
+SERVICE: VEHICLE RECALLs (GET Get by Vehicle Model Year ID)
+[Need: ":id"]
+
+SERVICE: VEHICLE SERVICE BULLETIN
+[Need: ":id"]
+
+
+
+
+
+
+
+*EDITORIAL CONTENT API AREA*
+
+GET EDITOR REVIEWS
+[Need: "make", "model", "year"]
+
+

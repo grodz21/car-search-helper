@@ -10,6 +10,12 @@ h3 {
 	float: right;
 }
 
+.textDecor {
+	font-family: 'Poiret One', cursive;
+	color: white;
+	font-weight: bold;
+}
+
 
 body {
 	margin: 0;
@@ -110,6 +116,10 @@ body {
     background-color: #BBDEFB;
     position: relative;
     vertical-align: top;
+}
+
+#yearOfCar {
+	width: 110px;
 }
 
 .fa {
