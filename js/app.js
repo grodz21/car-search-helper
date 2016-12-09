@@ -2,6 +2,8 @@
 	
 	var apiKey = "xaq2gcmpz7k5kt84d6wvwdpf";
 
+	var carToIdMapping = {};
+
 	
 	
 
@@ -9,28 +11,33 @@
 
 	$("#submitDataBttn").on('click', function() {
 
-		var stateOfVehicle = $('#stateOfCar').val();
-		var modelYear = Number($('#yearOfCar').val());
+		console.log($("#carModel").val());
+		console.log(carToIdMapping);
+		var carModel = $("#carModel").val();
+		console.log(carToIdMapping[carModel]);
 
 
-		$.ajax({
-			url: "https://api.edmunds.com/api/vehicle/v2/makes?state=" + stateOfVehicle + "&year=" + modelYear + 
-			"&view=basic&fmt=json&api_key=" + apiKey ,
 
-			method: "GET",
+	// https://api.edmunds.com/v1/api/maintenance/recallrepository/findbymodelyearid?modelyearid=200437625&fmt=json&api_key=xaq2gcmpz7k5kt84d6wvwdpf
+	// 	$.ajax({
+	// 		url: "https://api.edmunds.com/api/vehicle/v2/makes?state=" + stateOfVehicle + "&year=" + modelYear + 
+	// 		"&view=basic&fmt=json&api_key=" + apiKey ,
 
-		})
-		.done(successHandler)
-		.fail(errorHandler);
+	// 		method: "GET",
 
-		function successHandler(data){
-			console.log(data);
-		};
+	// 	})
+	// 	.done(successHandler)
+	// 	.fail(errorHandler);
 
+	// 	function successHandler(data){
+	// 		console.log(data);
+ //  		}
 
-		function errorHandler(error){
-			console.log(error);
-		};
+ //  		function errorHandler(data){
+
+ //  		}
+
+		
 	});
 
 
@@ -66,7 +73,7 @@
 			// $("#carMake").html("");
 
 			/*This appends the list of car makes to the make dropdown*/
-			for(i=0;nameList[i].length;i++){
+			for(var i = 0; i < nameList.length; i++){
 			$("#carMake").append("<option>" + nameList[i] + "</option>");
 			}
 
@@ -135,15 +142,35 @@
 				.done(successRecallHandler)
 				.fail(errorRecallHandler);
 
+
+
+
 				function successRecallHandler(data){
 					console.log(data);
+
+					var carList = [];
+
+					for(var i = 0; i < data.models.length; i++){
+						carToIdMapping[data.models[i].name] = data.models[i].years[0].id;
+						carList.push(data.models[i].name);
+						console.log(carToIdMapping);
+					}
+					
+					var carListToHTML = carList.map(function(carName){
+					return"<option>" + carName + "</option>";
+					});
+
+					$("#carModel").append(carListToHTML.join(""));
+
+					console.log(carListToHTML);
+					console.log(carListToHTML.join(""));	
+
 				}
 
 				function errorRecallHandler(error){
 					console.log(error);
 				}
 
-				
 
 			});
 
