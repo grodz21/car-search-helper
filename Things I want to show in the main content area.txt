@@ -21,3 +21,15 @@ GET EDITOR REVIEWS
 [Need: "make", "model", "year"]
 
 
+
+
+
+**********************************************************************************
+
+Recall display order:
+
+Compononent description
+corrective consequence
+defect corrective action
+recall number
+

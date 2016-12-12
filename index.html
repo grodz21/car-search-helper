@@ -12,18 +12,43 @@
 	<script type="text/javascript" src="js/mustache.min.js"></script>
 </head>
 
-<!-- MUSTACHE.JS EXAMPLE -->
 
-<!-- <script type="x-tmpl-mustache" id="user-template">
-  <img src='{{user.profile_image}}' />
-  <a href='{{ user.link }}'>
-  	<h2> {{ user.display_name}} </h2>
-  </a>
-  <p> Score: {{ score }}   UserNo.: {{ user.user_id }} </p>
-	<p> Post Count: {{ post_count }} </p>
-  
-</script> -->
+<script type="x-tmpl-mustache" id="recall-template">
+ 
+	<p> Component Description: {{ componentDescription }}  </p>
+	<p> Corrective consequence: {{ defectConsequence }}</p>
+	<p> Defect corrective action</p>
+<p>recall number</p>
 
+
+</script>
+
+
+
+<script type="x-tmpl-mustache" id="recall-template2">
+ {{#recallHolder}}
+
+ 	<p><strong> Recall number:</strong> {{ recallNumber }}</p>
+	<p><strong> Component description:</strong> {{ componentDescription }}  </p>
+	<p><strong> Corrective consequence:</strong> {{ defectConsequence }}</p>
+	<p><strong> Defect corrective action:</strong> {{ defectCorrectiveAction }}</p>
+	<br>
+
+{{/recallHolder}}
+</script>
+
+
+<script type="x-tmpl-mustache" id="serviceBulletin-template">
+ {{#serviceBulletinHolder}}
+
+	<p><strong> Issued date:</strong> {{ bulletinDate }}</p>
+ 	<p><strong> Bulletin number:</strong> {{ bulletinNumber }}</p>
+	<p><strong> Component description:</strong> {{ componentDescription }}  </p>
+	<p><strong> Summary:</strong> {{ summaryText }}</p>
+	<br>
+
+{{/serviceBulletinHolder}}
+</script>
 
 
 
@@ -62,6 +87,12 @@
 				<select name="carModelNames" id="carModel">
 					<option>Select</option> <!-- Use mustache js here {{car make}} -->
 				</select>
+				<br>
+				<br>
+				<select name="infoDisplay" id="infoDisplayOption">
+					<option value="1">Vehicle Recalls</option>
+					<option value="2">Vehicle Service Bulletin</option>
+				</select>
 			</form>
 
 			
@@ -86,7 +117,7 @@
 			<div class="getMakeOverveiewApicall">
 				<!-- "Get Make Overview" from the Editorial section -->
 				<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" class="infoContentText">
-            		<span style="color: white; font-size: 20px;"><strong>Hover to stop!</strong></span>            		
+            		<span style="color: white; font-size: 20px;"><strong>Please select each option from top to bottom.</strong></span>            		
 				</marquee>
 
 			</div>
@@ -100,17 +131,17 @@
 		</div>
 
 		<div class="contentWrapper">
-			
+			<!-- Recall and Service Bulletins are going to get printed here -->
+
+
+
+
+
 
 		</div>
+
 	</div>
 
-	
-
-	
-
-
-	
 </body>
 	<script type="text/javascript" src="js/app.js"></script>
 </html>
