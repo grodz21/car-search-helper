@@ -147,6 +147,11 @@ body {
 	box-shadow: 12px 0px 23px -11px rgba(0,0,0,0.75);
 }
 
+.optionSelectorWrapper {
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
 .topBarHorizontal {
 	background-color: #E040FB;
 	height: 100px;
